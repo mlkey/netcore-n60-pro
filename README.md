@@ -11,7 +11,9 @@ A template for building OpenWrt with GitHub Actions
 ## Usage
 
 - 点击 [Fork] 按钮生成新项目.
-- [LEDE源码](https://github.com/coolsnowwolf/lede)，自定义脚本diy-part2.sh，配置文件LEDE.config.
+- [LEDE源码](https://github.com/coolsnowwolf/lede)，自定义脚本diy-part2.sh，配置文件LEDE.config.该源码适配了硬改后的512M闪存，如果需要编译512M的ROM，需要在dailook-hanwckf.config文件里面添加如下内容：
+CONFIG_TARGET_DEVICE_mediatek_mt7986_DEVICE_netcore_n60pro-512rom=y
+CONFIG_TARGET_DEVICE_PACKAGES_mediatek_mt7986_DEVICE_netcore_n60pro-512rom=""
 - [dailook源码](https://github.com/dailook/immortalwrt-mt798x)，自定义脚本diy-part3.sh，配置文件dailook-hanwckf.config.
 - [Immortalwrt源码](https://github.com/immortalwrt/immortalwrt)，自定义脚本diy-part4.sh，配置文件immortalwrt.config.
 - [237源码](https://github.com/padavanonly/immortalwrt-mt798x-24.10)，6.6内核自定义脚本diy-part5-6.6.sh，配置文件padavanonly-immortalwrt-mt798x-6.6.config，5.4内核版本自定义脚本diy-part5-2410.sh，配置文件padavanonly-immortalwrt-mt798x-2410.config.
